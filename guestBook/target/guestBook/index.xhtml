@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <h:head>
+    	<link rel="stylesheet" type="text/css" href="/guestBook/faces/resources/css/default.css" />
+        <title>Guest Book</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:graphicImage value="#{resource['images:java_linux.jpg']}"/>
+            <br />
+            
+            
+            <ul>
+				<ui:repeat value="#{manager.entries}" var="item">
+					<li>
+						<div class = "entry"><span class = "highlight">User: </span>${item.name}</div><br />
+		   				<div class = "entry"><span class = "highlight">Users' mail: </span>${item.email}</div><br />
+		   				<div class = "entry"><span class = "highlight">Posts' date: </span>${item.date}</div><br />
+		   				<div class = "entry"><span class = "highlight">Text: </span>${item.text}</div>
+		   				<hr />
+   					</li>
+				</ui:repeat>
+			</ul>
+	        
+           
+            
+            <h2 class="header">
+               Please write something in my guest book.
+                <p></p>
+                <h:inputText
+                    id="userName" 
+                    value="#{entry.name}"
+                    required="true">
+                 </h:inputText>
+                <h:outputLabel
+                	for = "userName"
+                	class = "label"
+                	value = "User Name">
+                </h:outputLabel>
+                <h:message class = "validationError" for="userName"/>
+                <br />
+				
+				<h:inputText
+                    id="userEmail" 
+                    value="#{entry.email}"
+                    required="true">
+                     <f:validateRegex pattern=".+@.+\.[a-z]+"/>
+                </h:inputText>
+				<h:outputLabel
+                	for = "userEmail"
+                	class = "label"
+                	value = "User Email">
+                </h:outputLabel>
+				<h:message class = "validationError" for="userEmail"/>
+                <br /> 
+                
+                <h:inputTextarea
+                    id="text"
+                    class = "text_area" 
+                    value="#{entry.text}"
+                    required="true">
+                    <f:validateLength minimum="5" />
+                </h:inputTextarea>
+				<h:outputLabel
+                	for = "text"
+                	class = "label"
+                	value = "Text">
+                </h:outputLabel>
+				<h:message class = "validationError" for="text"/>
+                
+                 <br />
+                <h:commandButton id="submit" value="Submit"
+                                 action= "#{entry.submit}" />
+                                 
+                
+                
+                
+             <p></p>
+             </h2>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,37 @@
+.header {
+	color: green;
+}
+
+.text_area {
+	width: 600px;
+	height: 200px;
+}
+
+
+.label {
+	color: black;
+	font:italic bold 12px/30px Georgia,serif;
+}
+
+hr {
+	position:relative;
+	width:700px;
+	left: -470px;
+}
+
+.highlight {
+	color: blue;
+	text-decoration:underline;
+}
+
+.entry {
+	width:650px;
+}
+
+.validationError {
+	color: red;
+    font-family: 'New Century Schoolbook', serif;
+    font-style: oblique;
+    font-size: 10px;
+    text-decoration: underline;
+}
