@@ -6,9 +6,8 @@ import java.util.Date;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
-import org.hibernate.Session;
-
-import pl.mimuw.zpp.guestBook.util.HibernateUtil;
+import pl.mimuw.zpp.guestBook.dao.EntryDAO;
+import pl.mimuw.zpp.guestBook.dao.EntryDAOImpl;
 
 @ManagedBean
 public class Entry {
@@ -78,11 +77,8 @@ public class Entry {
 	
 	
 	public void submit() {
-		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
-		this.date = new Date();
-		session.beginTransaction();
-		session.save(this);
-		session.getTransaction().commit();
+		EntryDAO entryDAO = new EntryDAOImpl();
+		entryDAO.saveEntry(this);
 		try {
 			FacesContext.getCurrentInstance().getExternalContext().redirect("/guestBook/");
 		} catch(IOException e){
