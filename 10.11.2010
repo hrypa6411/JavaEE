@@ -1,0 +1,26 @@
+środa, 10 listopada 2010
+[21:36:57] Rafal Hryciuk: rafal@rafal-desktop:~/Programowanie/ZPP$ git clone https://git.mimuw.edu.pl/ZPPAnkieterUsos.git
+Initialized empty Git repository in /home/rafal/Programowanie/ZPP/ZPPAnkieterUsos/.git/
+error: server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none while accessing https://git.mimuw.edu.pl/ZPPAnkieterUsos.git/info/refs
+
+fatal: HTTP request failed
+[21:51:53] Jarek Hryciuk: and the following ~/.gitconfig:
+   [user]
+      name = My Name
+      email = my.em@il.com
+   [http]
+      sslVerify = false
+[21:52:13] Jarek Hryciuk:  ~/.gitconfig
+[21:54:52] Rafal Hryciuk: rafal@rafal-desktop:~/Programowanie/ZPP$ git clone http://git.mimuw.edu.pl/ZPPAnkieterUsos.git
+Initialized empty Git repository in /home/rafal/Programowanie/ZPP/ZPPAnkieterUsos/.git/
+error: The requested URL returned error: 401 while accessing http://git.mimuw.edu.pl/ZPPAnkieterUsos.git/info/refs
+
+fatal: HTTP request failed
+[21:56:10] Rafal Hryciuk: rafal@rafal-desktop:~/Programowanie/ZPP$ git clone https://git.mimuw.edu.pl/ZPPAnkieterUsos.git
+Initialized empty Git repository in /home/rafal/Programowanie/ZPP/ZPPAnkieterUsos/.git/
+error: server certificate verification failed. CAfile: /etc/ssl/certs/ca-certificates.crt CRLfile: none while accessing https://git.mimuw.edu.pl/ZPPAnkieterUsos.git/info/refs
+
+fatal: HTTP request failed
+[22:54:52] Jarek Hryciuk: log4j
+[22:54:57] Jarek Hryciuk: commons-logging
+[22:55:34] Jarek Hryciuk: wzorzec projektowy D

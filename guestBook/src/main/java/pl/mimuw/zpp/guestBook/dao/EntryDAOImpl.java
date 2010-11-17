@@ -1,6 +1,7 @@
 package pl.mimuw.zpp.guestBook.dao;
 
 import java.util.Date;
+import java.util.List;
 
 import org.hibernate.Session;
 
@@ -16,6 +17,14 @@ public class EntryDAOImpl implements EntryDAO {
 		session.beginTransaction();
 		session.save(this);
 		session.getTransaction().commit();		
+	}
+	
+	public List<Entry> getEntries() {
+		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+		session.beginTransaction();
+		List<Entry> entries = (List<Entry>)session.createQuery("from Entry").list();
+		session.getTransaction().commit();
+		return entries;
 	}
 
 }
