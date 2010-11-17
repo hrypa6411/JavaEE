@@ -15,7 +15,7 @@ public class EntryDAOImpl implements EntryDAO {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		e.setDate(new Date());
 		session.beginTransaction();
-		session.save(this);
+		session.save(e);
 		session.getTransaction().commit();		
 	}
 	
@@ -27,4 +27,6 @@ public class EntryDAOImpl implements EntryDAO {
 		return entries;
 	}
 
+	
+	
 }

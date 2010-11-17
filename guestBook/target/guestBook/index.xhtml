@@ -18,7 +18,7 @@
             
             
             <ul>
-				<ui:repeat value="#{manager.entries}" var="item">
+				<ui:repeat value="#{entryBean.entries}" var="item">
 					<li>
 						<div class = "entry"><span class = "highlight">User: </span>${item.name}</div><br />
 		   				<div class = "entry"><span class = "highlight">Users' mail: </span>${item.email}</div><br />
@@ -36,7 +36,7 @@
                 <p></p>
                 <h:inputText
                     id="userName" 
-                    value="#{entry.name}"
+                    value="#{entryBean.entry.name}"
                     required="true">
                  </h:inputText>
                 <h:outputLabel
@@ -49,7 +49,7 @@
 				
 				<h:inputText
                     id="userEmail" 
-                    value="#{entry.email}"
+                    value="#{entryBean.entry.email}"
                     required="true">
                      <f:validateRegex pattern=".+@.+\.[a-z]+"/>
                 </h:inputText>
@@ -64,7 +64,7 @@
                 <h:inputTextarea
                     id="text"
                     class = "text_area" 
-                    value="#{entry.text}"
+                    value="#{entryBean.entry.text}"
                     required="true">
                     <f:validateLength minimum="5" />
                 </h:inputTextarea>
@@ -77,7 +77,7 @@
                 
                  <br />
                 <h:commandButton id="submit" value="Submit"
-                                 action= "#{entry.submit}" />
+                                 action= "#{entryBean.pressButton}" />
                                  
                 
                 

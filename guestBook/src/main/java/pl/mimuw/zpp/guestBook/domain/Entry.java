@@ -9,7 +9,7 @@ import javax.faces.context.FacesContext;
 import pl.mimuw.zpp.guestBook.dao.EntryDAO;
 import pl.mimuw.zpp.guestBook.dao.EntryDAOImpl;
 
-@ManagedBean
+
 public class Entry {
 	private long id;
     String name;
@@ -74,18 +74,5 @@ public class Entry {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
-	
-	public void submit() {
-		EntryDAO entryDAO = new EntryDAOImpl();
-		entryDAO.saveEntry(this);
-		try {
-			FacesContext.getCurrentInstance().getExternalContext().redirect("/guestBook/");
-		} catch(IOException e){
-			
-		}
-
-	}
-
-    
+	    
 }

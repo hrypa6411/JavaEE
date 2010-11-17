@@ -4,15 +4,18 @@
       <string>currentBuild</string>
       <path-set>
         <pathsSet class="linked-hash-set">
-          <string>WEB-INF/web.xml</string>
           <string>index.xhtml</string>
           <string>resources/css/default.css</string>
           <string>resources/images/java_linux.jpg</string>
-          <string>WEB-INF/classes/hibernate.cfg.xml</string>
-          <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/domain/Entry.hbm.xml</string>
-          <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/domain/Entry.class</string>
-          <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/domain/Manager.class</string>
+          <string>WEB-INF/web.xml</string>
           <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/util/HibernateUtil.class</string>
+          <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/controller/EntryController.class</string>
+          <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/dao/EntryDAOImpl.class</string>
+          <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/dao/EntryDAO.class</string>
+          <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/domain/Entry.class</string>
+          <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/domain/Entry.hbm.xml</string>
+          <string>WEB-INF/classes/pl/mimuw/zpp/guestBook/www/EntryBean.class</string>
+          <string>WEB-INF/classes/hibernate.cfg.xml</string>
           <string>WEB-INF/lib/hibernate-core-3.6.0.Final.jar</string>
           <string>WEB-INF/lib/antlr-2.7.6.jar</string>
           <string>WEB-INF/lib/commons-collections-3.1.jar</string>
