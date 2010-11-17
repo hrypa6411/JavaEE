@@ -7,4 +7,6 @@ public interface EntryDAO {
 	
 	void saveEntry(Entry e);
 	
+	//List<Entry> getEntries
+	
 }
