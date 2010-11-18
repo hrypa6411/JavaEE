@@ -1,13 +1,7 @@
 package pl.mimuw.zpp.guestBook.domain;
 
-import java.io.IOException;
 import java.util.Date;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.context.FacesContext;
-
-import pl.mimuw.zpp.guestBook.dao.EntryDAO;
-import pl.mimuw.zpp.guestBook.dao.EntryDAOImpl;
 
 
 public class Entry {

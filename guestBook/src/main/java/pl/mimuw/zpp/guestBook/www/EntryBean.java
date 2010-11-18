@@ -1,14 +1,10 @@
 package pl.mimuw.zpp.guestBook.www;
 
-import java.io.IOException;
-import java.util.Date;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.context.FacesContext;
 
 import pl.mimuw.zpp.guestBook.controller.EntryController;
-import pl.mimuw.zpp.guestBook.dao.EntryDAO;
 import pl.mimuw.zpp.guestBook.dao.EntryDAOImpl;
 import pl.mimuw.zpp.guestBook.domain.Entry;
 
@@ -54,7 +50,7 @@ public class EntryBean {
 	}
     
     public void pressButton() {
-    	this.entryController.commit(this.entry);
+    	this.entryController.commit(this);
     }
 	    
 

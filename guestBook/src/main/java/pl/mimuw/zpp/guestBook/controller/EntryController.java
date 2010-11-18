@@ -5,7 +5,7 @@ import java.io.IOException;
 import javax.faces.context.FacesContext;
 
 import pl.mimuw.zpp.guestBook.dao.EntryDAOImpl;
-import pl.mimuw.zpp.guestBook.domain.Entry;
+import pl.mimuw.zpp.guestBook.www.EntryBean;
 
 public class EntryController {
 	EntryDAOImpl entryDaoImpl;
@@ -14,8 +14,8 @@ public class EntryController {
 		this.entryDaoImpl = new EntryDAOImpl();
 	}
 	
-	public void commit(Entry e) {
-		this.entryDaoImpl.saveEntry(e);
+	public void commit(EntryBean e) {
+		this.entryDaoImpl.saveEntry(e.getEntry());
 		
 		try {
 			FacesContext.getCurrentInstance().getExternalContext().redirect("/guestBook/");
