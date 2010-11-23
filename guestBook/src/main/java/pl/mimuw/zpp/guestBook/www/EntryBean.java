@@ -5,22 +5,18 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 
 import pl.mimuw.zpp.guestBook.controller.EntryController;
-import pl.mimuw.zpp.guestBook.dao.EntryDAOImpl;
 import pl.mimuw.zpp.guestBook.domain.Entry;
 
 
 @ManagedBean
 public class EntryBean {
-	
 	private Entry entry;
 	private List<Entry> entries;
-	private EntryDAOImpl entryDaoImpl;
 	private EntryController entryController;
 		
     public EntryBean() {
     	this.entry = new Entry();
-    	this.entryDaoImpl = new EntryDAOImpl();
-    	this.entries = this.entryDaoImpl.getEntries();
+    	this.entries = this.entryController.getEntries();
     	this.entryController = new EntryController();
         System.out.println("Utworzylem obiekt Entry");
     }
@@ -41,14 +37,7 @@ public class EntryBean {
 		this.entries = entries;
 	}
 
-	public EntryDAOImpl getEntryDaoImpl() {
-		return entryDaoImpl;
-	}
-
-	public void setEntryDaoImpl(EntryDAOImpl entryDaoImpl) {
-		this.entryDaoImpl = entryDaoImpl;
-	}
-    
+	    
     public void pressButton() {
     	this.entryController.commit(this);
     }
