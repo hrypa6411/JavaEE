@@ -16,9 +16,9 @@ public class EntryBean {
 		
     public EntryBean() {
     	this.entry = new Entry();
-    	this.entries = this.entryController.getEntries();
     	this.entryController = new EntryController();
-        System.out.println("Utworzylem obiekt Entry");
+        this.entries = this.entryController.getEntries();
+    	System.out.println("Utworzylem obiekt Entry");
     }
 
 	public Entry getEntry() {
