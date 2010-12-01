@@ -9,6 +9,10 @@ import pl.mimuw.zpp.guestBook.domain.Entry;
 import pl.mimuw.zpp.guestBook.util.HibernateUtil;
 
 public class EntryDAOImpl implements EntryDAO {
+	
+	public EntryDAOImpl() {
+		System.out.println("Utworzyłem obiekt EntryDAOImpl");
+	}
 
 	@Override
 	public void saveEntry(Entry e) {
