@@ -6,10 +6,6 @@
 
   <!-- services -->
 
-	<bean id="entry"
-    	class="pl.mimuw.zpp.guestBook.domain.Entry">
-  	</bean>
-
 	<bean id="entryController"
         class="pl.mimuw.zpp.guestBook.controller.EntryController">
         <constructor-arg>
@@ -17,8 +13,6 @@
 		</constructor-arg>
 
   	</bean>
-	
-
 
   <!-- more bean definitions for services go here -->
 

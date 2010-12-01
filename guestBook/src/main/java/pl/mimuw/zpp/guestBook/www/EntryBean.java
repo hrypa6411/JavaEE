@@ -4,6 +4,9 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import pl.mimuw.zpp.guestBook.controller.EntryController;
 import pl.mimuw.zpp.guestBook.domain.Entry;
 
@@ -14,9 +17,19 @@ public class EntryBean {
 	private List<Entry> entries;
 	private EntryController entryController;
 		
-    public EntryBean(Entry entry, EntryController entryController) {
-    	this.entry = entry;
-    	this.entryController = entryController;
+	private static ApplicationContext context;
+	private static final String CTX_CONTROLLER = "entryController";
+	
+	
+	static {
+		context =
+		    new ClassPathXmlApplicationContext(new String[] {"services.xml", "daos.xml", "buisnessLogic.xml"});		 
+	}	
+	
+	
+    public EntryBean() {
+    	this.entry = new Entry();
+    	this.entryController = (EntryController) context.getBean(CTX_CONTROLLER);
         this.entries = entryController.getEntries();
     }
 
