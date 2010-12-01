@@ -6,7 +6,6 @@ import java.util.List;
 import javax.faces.context.FacesContext;
 
 import pl.mimuw.zpp.guestBook.dao.EntryDAO;
-import pl.mimuw.zpp.guestBook.dao.EntryDAOImpl;
 import pl.mimuw.zpp.guestBook.domain.Entry;
 import pl.mimuw.zpp.guestBook.www.EntryBean;
 

@@ -11,8 +11,6 @@
         class="pl.mimuw.zpp.guestBook.www.EntryBean">
     	<constructor-arg ref="entry"/>
     	
-    	    	
-    	
 		<constructor-arg ref="entryController"/>
 
     <!-- additional collaborators and configuration for this bean go here -->
