@@ -7,14 +7,18 @@ import javax.faces.context.FacesContext;
 
 import pl.mimuw.zpp.guestBook.dao.EntryDAO;
 import pl.mimuw.zpp.guestBook.dao.EntryDAOImpl;
-import pl.mimuw.zpp.guestBook.www.EntryBean;
 import pl.mimuw.zpp.guestBook.domain.Entry;
+import pl.mimuw.zpp.guestBook.www.EntryBean;
+
+
+
 
 public class EntryController {
 	private EntryDAO entryDao;
 	
-	public EntryController() {
-		this.entryDao = new EntryDAOImpl();
+	public EntryController(EntryDAO entryDao) {
+		this.entryDao = entryDao;
+		System.out.println("UTowrzyłem EntryController");
 	}
 	
 	public void commit(EntryBean e) {

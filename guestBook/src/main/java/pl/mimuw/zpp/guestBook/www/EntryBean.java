@@ -14,11 +14,10 @@ public class EntryBean {
 	private List<Entry> entries;
 	private EntryController entryController;
 		
-    public EntryBean() {
-    	this.entry = new Entry();
-    	this.entryController = new EntryController();
-        this.entries = this.entryController.getEntries();
-    	System.out.println("Utworzylem obiekt Entry");
+    public EntryBean(Entry entry, EntryController entryController) {
+    	this.entry = entry;
+    	this.entryController = entryController;
+        this.entries = entryController.getEntries();
     }
 
 	public Entry getEntry() {
