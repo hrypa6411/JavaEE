@@ -6,6 +6,7 @@
 
   <bean id="entryDaoImpl"
       class="pl.mimuw.zpp.guestBook.dao.EntryDAOImpl">
+      <property name="sessionFactory" ref="mySessionFactory"/>
   </bean>
 
   <!-- more bean definitions for data access objects go here -->

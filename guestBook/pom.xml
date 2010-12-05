@@ -42,6 +42,29 @@
       <version>3.0.5.RELEASE</version>
     </dependency>
 
+     <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-dao</artifactId>
+      <version>2.0.8</version>
+    </dependency>
+    
+     <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>3.0.5.RELEASE</version>
+    </dependency>
+    
+    <dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>1.4</version>
+	</dependency>
+    
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-hibernate3</artifactId>
+      <version>2.0.8</version>
+    </dependency>
     
     <dependency>
       <groupId>org.hibernate</groupId>

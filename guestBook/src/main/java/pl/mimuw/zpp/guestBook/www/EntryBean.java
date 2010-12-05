@@ -23,7 +23,8 @@ public class EntryBean {
 	
 	static {
 		context =
-		    new ClassPathXmlApplicationContext(new String[] {"services.xml", "daos.xml", "buisnessLogic.xml"});		 
+		    new ClassPathXmlApplicationContext(
+		    	new String[] {"daos.xml", "buisnessLogic.xml", "hibernate.xml" });		 
 	}	
 	
 	
@@ -52,8 +53,7 @@ public class EntryBean {
 	    
     public void pressButton() {
     	this.entryController.commit(this);
-    }
-	    
+    }    
 
 
 }
