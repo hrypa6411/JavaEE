@@ -31,7 +31,5 @@ public class EntryDAOImpl extends HibernateDaoSupport implements EntryDAO {
 		List<Entry> entries = (List<Entry>) getHibernateTemplate().find("from Entry");
 		return entries;
 	}
-
-	
 	
 }

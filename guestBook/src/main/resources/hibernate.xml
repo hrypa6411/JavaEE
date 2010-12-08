@@ -11,10 +11,6 @@
        http://www.springframework.org/schema/aop 
        http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
-
-
-	
-
 	
 	
 
@@ -24,6 +20,7 @@
     	<property name="username" value="postgres"/>
     	<property name="password" value="wojownik6"/>
    	</bean>
+   	
 
 	<bean id="mySessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
     	<property name="dataSource" ref="myDataSource"/>
